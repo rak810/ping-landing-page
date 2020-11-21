@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Ping coming soon page</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section>
+    <div class="logo"><img src="images/logo.svg" alt=""></div>
+    <div class="main">
+      <div class="header">
+        <h1> We are launching <span>soon!</span></h1>
+        <p>Subscribe and get notified</p>
+      </div>
+      <div class="form-group">
+        <form action="">
+          <input type="email" name="" id="in" placeholder="Your email address...">
+          <input type="button" id="btn" value="Notify me">
+        </form>
+        <p>Please provide a valid email address</p>
+      </div>
+    </div>
+    <div class="board"><img src="images/illustration-dashboard.png" alt=""></div>
+    <div class="footer">
+      <div class="social-links">
+        <a><i class="fab fa-facebook-f"></i></a>
+        <a><i class="fab fa-twitter"></i></a>
+        <a><i class="fab fa-instagram"></i></a>
+      </div>
+      <p>&copy; Copyright Ping. All rights reserved.</p>
+    </div>
+  </section>
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer>
+
+  <script>
+    const input = document.querySelector('#in');
+    const btn = document.querySelector('#btn');
+    const p = document.querySelector('.form-group p');
+
+    btn.addEventListener('click', function() {
+        if(!input.validity.valid) {
+          p.style.display = 'block';
+          input.style.borderColor = '#ff5263';
+        }
+        else {
+          p.style.display = 'none';
+          input.style.borderColor = 'hsl(223, 100%, 88%)';
+        }
+    });
+  </script>
+</body>
+
+</html>
