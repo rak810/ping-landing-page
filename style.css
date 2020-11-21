@@ -91,7 +91,7 @@ section {
     font-size: 0.5rem;
     padding-left: 2.9rem;
     color: #ff5263;
-    /* display: none; */
+    display: none;
     transition: all 1s;
 
 }
